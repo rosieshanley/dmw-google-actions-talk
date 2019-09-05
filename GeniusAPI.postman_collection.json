@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "4026b61d-de59-437f-8285-6a90d0d7fa3f",
+		"name": "Genius API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search by Lyrics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{geniusAccessToken}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "User-Agent",
+						"value": "CompuServe Classic/1.22",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.genius.com/search?q=you make loving fun",
+					"protocol": "https",
+					"host": [
+						"api",
+						"genius",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "you make loving fun"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Song",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{geniusAccessToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.genius.com/songs/378195",
+					"host": [
+						"api",
+						"genius",
+						"com"
+					],
+					"path": [
+						"songs",
+						"378195"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

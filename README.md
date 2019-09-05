@@ -4,11 +4,16 @@
 
 [What We'll Use](https://github.com/rosieshanley/dmw-google-actions-talk#what-well-use)
 
+- [Free-Tier GCP Account](https://github.com/rosieshanley/dmw-google-actions-talk#free-tier-gcp-account)
+- [Actions on Google](https://github.com/rosieshanley/dmw-google-actions-talk#actions-on-google)
+- [Dialogflow](https://github.com/rosieshanley/dmw-google-actions-talk#dialogflow)
+- [Firebase Cloud Functions](https://github.com/rosieshanley/dmw-google-actions-talk#firebase-cloud-functions)
+
 [Instructions](https://github.com/rosieshanley/dmw-google-actions-talk#instructions)
 
 1. [Create a free trial account for the Google Cloud Platform](https://github.com/rosieshanley/dmw-google-actions-talk#create-a-free-trial-account-for-the-google-cloud-platform)
-2. [Enable cloud billing for your project](https://github.com/rosieshanley/dmw-google-actions-talk#enable-cloud-billing-for-your-project)
-3. [Create an Actions project](https://github.com/rosieshanley/dmw-google-actions-talk#create-an-actions-project)
+2. [Create an Actions project](https://github.com/rosieshanley/dmw-google-actions-talk#create-an-actions-project)
+3. [Enable cloud billing for your project](https://github.com/rosieshanley/dmw-google-actions-talk#enable-cloud-billing-for-your-project)
 4. [Create a Dialogflow agent](https://github.com/rosieshanley/dmw-google-actions-talk#create-a-dialogflow-agent)
 5. [Import the Dialogflow project files](https://github.com/rosieshanley/dmw-google-actions-talk#import-the-dialogflow-project-files)
 6. [Test your Action in the Actions console simulator](https://github.com/rosieshanley/dmw-google-actions-talk#test-your-action-in-the-actions-console-simulator)
@@ -41,11 +46,11 @@ When you log into your account, you'll see a banner indicating the credit balanc
 
 Actions on Google lets you create Actions to extend the functionality of the Google Assistant.
 
-###### Key Terms
+#### Key Terms
 
-**Action:** entry point into an interaction that you build for the Assistant.
-**Intent:** An underlying goal or task the user wants to do.
-**Fulfillment:** A service, app, feed, conversation, or other logic that handles an intent and carries out the corresponding Action.
+- **Action:** entry point into an interaction that you build for the Assistant.
+- **Intent:** An underlying goal or task the user wants to do.
+- **Fulfillment:** A service, app, feed, conversation, or other logic that handles an intent and carries out the corresponding Action.
 
 [Learn More](https://actions.google.com)
 
@@ -54,13 +59,13 @@ Actions on Google lets you create Actions to extend the functionality of the Goo
 We'll use Dialogflow to handle user input from the Google Assistant and send requests to our fulfillment webhook.
 It can also be used to extract key words and phrases from the user's input. (e.g. lyricpreface)
 
-###### Key Terms
+#### Key Terms
 
-**Agent:** A Dialogflow agent handles conversations with your end-users. It is a natural language understanding module that understands the nuances of human language. Dialogflow translates end-user text or audio during a conversation to structured data that your apps and services can understand. You design and build a Dialogflow agent to handle the types of conversations required for your system.
-**Parameters:** Represents values that you want to extract from the user's phrases, similar to fields in a form. (e.g. the time and date fields for a scheduling intent.)
-**Intent:** An object that maps user utterances to your agent's response. You can specify a static response directly within the intent or generate a dynamic response with a webhook.
-**Fulfillment Webhook:** Code that responds to an HTTP request in a Dialogflow-specific messaging format; it contains the logic for handling intents and dynamically constructing responses to send to the user. If your Action interacts with external APIs, requires complex logic, or needs to read and store to a database, it will need fulfillment.
-**Entities (Dialogflow):** Represents a category of things. (e.g. colors, dates, or in our case, lyric prefaces) Dialogflow uses entities for extracting parameter values from natural language inputs.
+- **Agent:** A Dialogflow agent handles conversations with your end-users. It is a natural language understanding module that understands the nuances of human language. Dialogflow translates end-user text or audio during a conversation to structured data that your apps and services can understand. You design and build a Dialogflow agent to handle the types of conversations required for your system.
+- **Parameters:** Represents values that you want to extract from the user's phrases, similar to fields in a form. (e.g. the time and date fields for a scheduling intent.)
+- **Intent:** An object that maps user utterances to your agent's response. You can specify a static response directly within the intent or generate a dynamic response with a webhook.
+- **Fulfillment Webhook:** Code that responds to an HTTP request in a Dialogflow-specific messaging format; it contains the logic for handling intents and dynamically constructing responses to send to the user. If your Action interacts with external APIs, requires complex logic, or needs to read and store to a database, it will need fulfillment.
+- **Entities (Dialogflow):** Represents a category of things. (e.g. colors, dates, or in our case, lyric prefaces) Dialogflow uses entities for extracting parameter values from natural language inputs.
 
 [Learn More](https://cloud.google.com/dialogflow/)
 
@@ -145,7 +150,7 @@ This is because the intent we triggered, **"search lyrics"**, expects a Dialogfl
 
 ### Set up your local development environment to develop actions locally
 
-###### Dependencies
+#### Dependencies
 
 - A terminal with NodeJS, npm, and git installed.
 - Text editor / IDE of your choice.
@@ -219,9 +224,8 @@ firebase deploy --project <project-name>
 
 ### Test your newly configured Dialogflow fulfillment webhook
 
-1. Return to the Actions console simulator
-   // TODO: finish this
+Return to the Actions console simulator and test your newly functioning google action!
 
 ## Additional Resources
 
-Looking for more tutorials working with GCP? Check out Google's [codelab offerings](https://codelabs.developers.google.com/)
+Looking for more tutorials working with GCP? Check out Google's [codelab offerings](https://codelabs.developers.google.com/).
